@@ -38,3 +38,31 @@ annclassification/ ├── app.py # Streamlit app ├── model.h5 # Trained
 pip install -r requirements.txt
 streamlit run app.py
 **** Visit: http://localhost:8501
+
+🌐 Deployment
+
+You can deploy this app to:
+
+    Streamlit Cloud
+
+    A Virtual Machine (e.g., Alibaba Cloud ECS)
+
+    Docker container
+
+    Azure App Service / Heroku / AWS EC2
+
+📊 Sample Prediction Output
+
+    Input features: Credit Score, Age, Gender, Geography, etc.
+
+    Output: Churn Probability: 0.78
+
+    Message: The customer is likely to churn.
+
+🔒 Note
+
+Ensure the .pkl and .h5 model files are present in the same directory when running the app. These files are critical for data transformation and prediction.
+
+📬 Contact
+
+Feel free to fork or contribute. For issues, please open an issue or pull request!
