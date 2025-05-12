@@ -29,6 +29,18 @@ st.markdown(
     if not is_cn else
     "通过训练好的AI模型，根据客户的基本信息和财务数据预测其是否可能流失。"
 )
+labels = {
+    "title": "Bank Customer Churn Prediction" if not is_cn else "银行客户流失预测",
+    "tab1": "Single Prediction" if not is_cn else "单个预测",
+    "tab2": "Batch Prediction" if not is_cn else "批量预测",
+    "upload": "Upload CSV File" if not is_cn else "上传CSV文件",
+    "download": "Download Results" if not is_cn else "下载预测结果",
+    "result": "Prediction Result" if not is_cn else "预测结果",
+    "prob": "Churn Probability" if not is_cn else "客户流失概率",
+    "flag": "Churn?" if not is_cn else "是否流失？",
+    "explain": "Key Risk Indicators" if not is_cn else "关键影响因素"
+}
+
 tab1, tab2 = st.tabs([labels["tab1"], labels["tab2"]])
 
 # ─────────────── Tab 1: Single Prediction ─────────────── #
