@@ -18,24 +18,15 @@ with open('scaler.pkl', 'rb') as f:
 lang = st.selectbox("🌐 Select Language / 选择语言", ["English", "中文"])
 is_cn = lang == "中文"
 
-# UI labels
-labels = {
-    "title": "客户流失预测" if is_cn else "Customer Churn Prediction",
-    "tab1": "单个预测" if is_cn else "Single Prediction",
-    "tab2": "批量预测" if is_cn else "Batch Prediction",
-    "upload": "上传CSV文件" if is_cn else "Upload CSV File",
-    "download": "下载预测结果" if is_cn else "Download Results",
-    "result": "预测结果" if is_cn else "Prediction Result",
-    "prob": "客户流失概率" if is_cn else "Churn Probability",
-    "flag": "流失?" if is_cn else "Churn?",
-    "explain": "关键影响因素" if is_cn else "Key Risk Indicators"
-}
+# Show logo
+st.image("https://s3.ap-east-1.amazonaws.com/employee-churn.optimops.ai/logo_v1.png", width=180)
 
-st.title("Bank Customer Churn Prediction" if not is_cn else "银行客户流失预测")
+# Title and description
+st.title("ABC Bank - Customer Churn Prediction" if not is_cn else "ABC 银行客户流失预测")
 
 st.markdown(
-    "Predict whether a bank customer is likely to churn based on demographic and financial data using a trained AI model." 
-    if not is_cn else 
+    "Predict whether a bank customer is likely to churn based on demographic and financial data using a trained AI model."
+    if not is_cn else
     "通过训练好的AI模型，根据客户的基本信息和财务数据预测其是否可能流失。"
 )
 tab1, tab2 = st.tabs([labels["tab1"], labels["tab2"]])
