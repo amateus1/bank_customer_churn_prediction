@@ -31,7 +31,13 @@ labels = {
     "explain": "关键影响因素" if is_cn else "Key Risk Indicators"
 }
 
-st.title(labels["title"])
+st.title("Bank Customer Churn Prediction" if not is_cn else "银行客户流失预测")
+
+st.markdown(
+    "Predict whether a bank customer is likely to churn based on demographic and financial data using a trained AI model." 
+    if not is_cn else 
+    "通过训练好的AI模型，根据客户的基本信息和财务数据预测其是否可能流失。"
+)
 tab1, tab2 = st.tabs([labels["tab1"], labels["tab2"]])
 
 # ─────────────── Tab 1: Single Prediction ─────────────── #
